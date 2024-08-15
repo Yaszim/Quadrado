@@ -24,10 +24,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             case ("Salvar"):
                 $resultado = $quadrado->incluir();
                 break;
-            case ("alterar"):
+            case ("Alterar"):
                 $resultado = $quadrado->alterar();
                 break;
-            case ("excluir"):
+            case ("Excluir"):
                 $resultado = $quadrado->excluir();
                 break;
         }

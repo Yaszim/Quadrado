@@ -6,7 +6,6 @@ include_once('quadrado.php');
 
 <head>
 
-
     <title>Criação de quadrado</title>
 </head>
 
@@ -15,20 +14,16 @@ include_once('quadrado.php');
         <a class="nav-link active" aria-current="page" href="#">Cadastro de Quadrado</a>
         <a class="nav-link" href="../unidade/index.php">Cadastro de Unidade</a>
 
-
         <form action="quadrado.php" method="post">
 
-                    <h4> <b>Cadastro de Quadrado</b></h4>
+            <h4> <b>Cadastro de Quadrado</b></h4>
 
 <fieldset>
 
                     <label for="lado">Altura</label>
                     <input type="number" name="lado" id="lado" value="<?= $id ? $quadrado->getLado() : 0 ?>" placeholder=" Digite a lado de sua forma">
-
                     <label for="cor">Cor</label>
                     <input type="color" name="cor" id="cor" placeholder=" Digite a cor de sua forma" value="<?= $id ? $quadrado->getCor() : "black" ?>">
-
-
                     <label  for="unidade">Unidade</label>
                     <select  name="unidade" id="unidade">
                     <?php  
@@ -46,7 +41,8 @@ include_once('quadrado.php');
                     <input type="text" name="id" id="id" value="<?= isset($quadrado) ? $quadrado->getId() : 0 ?>"  hidden>
 
                     <input type="submit" name="acao" id="acao" value="Salvar">
-                    <input type="reset" name="resetar" id="resetar" value="Resetar">
+                    <input type="submit" name="acao" id="acao" value="Excluir">
+                    <input type="submit" name="acao" id="acao" value="Alterar">
 
         </form>
 </fieldset>
@@ -69,7 +65,7 @@ include_once('quadrado.php');
 
         </form>
         <table>
-            <thead class="table-dark">
+            <thead>
                 <th>Id</th>
                 <th>Lado</th>
                 <th>Cor</th>
